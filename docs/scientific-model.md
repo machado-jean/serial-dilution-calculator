@@ -112,3 +112,24 @@ laboratoriais configuráveis.
 está documentada em `specs/004-intermediate-solution.md`. Ela usa
 `EQ-DIL-002` e `PipetteConstraint`, sem alegar otimização ou conformidade
 metodológica.
+
+## EQ-INOC-001 e EQ-INOC-002 — Correção por inoculação
+
+**Classificação:** DERIVED
+
+```text
+C_final = C_pre × V_pre / (V_pre + V_inóculo)
+C_pre = C_final × (V_pre + V_inóculo) / V_pre
+```
+
+**Derivação:** a massa de antimicrobiano antes da inoculação é
+`C_pre × V_pre`. Como o inóculo não contém antimicrobiano, essa massa se
+distribui pelo volume total `V_pre + V_inóculo`, resultando em `EQ-INOC-001`.
+O isolamento de `C_pre` resulta em `EQ-INOC-002`.
+
+**Premissas:** inóculo isento de antimicrobiano, conservação do antimicrobiano
+e aditividade de volumes. Não há uma hipótese de volumes iguais. A relação de
+redução à metade somente ocorre quando os volumes fornecidos são iguais.
+
+**Exemplo e teste analítico:** `8 µg/mL × 100 µL / (100 µL + 100 µL) =
+4 µg/mL`. Ver `tests/analytical/test_inoculation.py`.

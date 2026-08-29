@@ -61,3 +61,14 @@ o mínimo de `20 µL` é LAB-CONSTRAINT.
 
 Este caso valida a regra determinística proposta, não um procedimento
 laboratorial normativo completo.
+
+## INOC-AN-001 — Concentração após inoculação de igual volume
+
+**Resultado conhecido:** `8 µg/mL × 100 µL / (100 µL + 100 µL) = 4 µg/mL`
+
+**Classificação:** operação DERIVED, `EQ-INOC-001`
+
+**Teste automatizado:** `tests/analytical/test_inoculation.py`
+
+Este caso valida a conservação de massa para os volumes fornecidos. A redução
+por dois é consequência de volumes iguais, não uma regra fixa do programa.
