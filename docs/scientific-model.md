@@ -133,3 +133,22 @@ redução à metade somente ocorre quando os volumes fornecidos são iguais.
 
 **Exemplo e teste analítico:** `8 µg/mL × 100 µL / (100 µL + 100 µL) =
 4 µg/mL`. Ver `tests/analytical/test_inoculation.py`.
+
+## EQ-SER-001 — Concentrações em série de diluição
+
+**Classificação:** DERIVED
+
+```text
+Cₙ = C₀ / fatorⁿ
+```
+
+**Derivação:** cada etapa divide a concentração anterior pelo fator configurado.
+Após `n` etapas, a divisão é aplicada `n` vezes, resultando em
+`C₀ / fatorⁿ`.
+
+**Premissas:** concentração inicial maior que zero, fator maior que um e índice
+inteiro iniciado em zero. A equação gera uma série matemática; não especifica
+volumes, transferências físicas, descarte ou disposição em placa.
+
+**Exemplo e teste analítico:** `64 µg/mL` com fator `2` e quatro posições gera
+`64`, `32`, `16` e `8 µg/mL`. Ver `tests/analytical/test_serial_dilution.py`.

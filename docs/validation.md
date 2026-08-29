@@ -72,3 +72,15 @@ laboratorial normativo completo.
 
 Este caso valida a conservação de massa para os volumes fornecidos. A redução
 por dois é consequência de volumes iguais, não uma regra fixa do programa.
+
+## SER-AN-001 — Série de duas dobras conhecida
+
+**Resultado conhecido:** concentração inicial `64 µg/mL`, fator `2`, quatro
+posições → `64`, `32`, `16`, `8 µg/mL`.
+
+**Classificação:** operação DERIVED, `EQ-SER-001`
+
+**Teste automatizado:** `tests/analytical/test_serial_dilution.py`
+
+Este caso valida a sequência matemática. Ele não representa por si só um
+procedimento de diluição seriada em placa.
