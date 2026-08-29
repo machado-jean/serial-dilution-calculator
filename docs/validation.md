@@ -84,3 +84,14 @@ posições → `64`, `32`, `16`, `8 µg/mL`.
 
 Este caso valida a sequência matemática. Ele não representa por si só um
 procedimento de diluição seriada em placa.
+
+## PLATE-AN-001 — Geometria da placa de 96 poços
+
+**Resultado conhecido:** 8 linhas × 12 colunas = 96 posições, de `A1` a `H12`.
+
+**Classificação:** LAB-CONSTRAINT
+
+**Teste automatizado:** `tests/unit/test_plate96.py`
+
+Este caso valida o modelo físico de placa e não uma configuração experimental
+ou procedimento de microdiluição.
