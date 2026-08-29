@@ -1,21 +1,20 @@
-# Serial Dilution Calculator
+# Calculadora de Diluição Seriadas
 
-Scientific calculator for antimicrobial solution preparation, broth microdilution planning, dilution series, inoculation correction, plate concentration mapping, and technical calculation reports.
+Calculadora científica para preparo de soluções antimicrobianas, planejamento de microdiluição em caldo, séries de diluição, correção por inoculação, mapeamento de concentrações em placas e relatórios técnicos de cálculo.
 
-The project prioritizes scientific traceability, explicit units, Decimal-based arithmetic, laboratory feasibility, reproducibility, and automated validation.
+O projeto prioriza rastreabilidade científica, unidades explícitas, aritmética baseada em `Decimal`, viabilidade laboratorial, reprodutibilidade e validação automatizada.
 
-## Development setup
+## Ambiente de desenvolvimento
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 python -m pytest
 ```
 
-The scientific core intentionally has no third-party runtime dependencies in this initial phase. `pytest` is the only development dependency.
+Nesta fase inicial, o núcleo científico não possui dependências de execução de terceiros. `pytest` é a única dependência de desenvolvimento.
 
-## Status
+## Estado atual
 
-Stage 1: project foundation and development environment.
+Etapa 2: fundação do projeto e modelo dimensional de unidades.
 
-Scientific requirements and architectural rules are defined in [AGENTS.md](AGENTS.md).
-
+Os requisitos científicos e as regras arquiteturais estão definidos em [AGENTS.md](AGENTS.md).

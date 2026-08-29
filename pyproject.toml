@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "antimicrobial-calculator"
 version = "0.1.0"
-description = "Scientific calculator for antimicrobial solution preparation and broth microdilution planning."
+description = "Calculadora científica para preparo de soluções antimicrobianas e planejamento de microdiluição em caldo."
 readme = "README.md"
 requires-python = ">=3.13"
 license = { text = "MIT" }
@@ -25,4 +25,3 @@ addopts = "-ra"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

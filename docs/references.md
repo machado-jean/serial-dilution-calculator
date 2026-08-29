@@ -1,4 +1,3 @@
-# References
+# Referências
 
-Adopted scientific references and their permitted scope will be recorded here.
-
+As referências científicas adotadas e o respectivo escopo permitido serão registrados aqui.

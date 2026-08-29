@@ -1,8 +1,7 @@
-# Architecture
+# Arquitetura
 
-The intended dependency direction is:
+A direção planejada de dependências é:
 
 `domain / units → calculations → planning → reporting → ui`
 
-Scientific formulas are implemented in the calculation layer, documented with equation identifiers, and tested independently of the user interface.
-
+As fórmulas científicas são implementadas na camada de cálculos, documentadas com identificadores de equação e testadas independentemente da interface de usuário.
