@@ -95,3 +95,29 @@ procedimento de diluição seriada em placa.
 
 Este caso valida o modelo físico de placa e não uma configuração experimental
 ou procedimento de microdiluição.
+
+## INT-001 — Cadeia integrada de microdiluição
+
+**Resultado conhecido:** com o preset explícito de `20 µL` de antimicrobiano,
+`180 µL` de meio e `100 µL` de inóculo, alvo final de `4 µg/mL` requer
+`6 µg/mL` pré-inoculação e `60 µg/mL` de solução de trabalho.
+
+**Classificação:** combina DERIVED (`EQ-INOC-002`, `EQ-WORK-001`) e
+LAB-CONSTRAINT (volumes do preset).
+
+**Teste automatizado:** `tests/integration/test_microdilution_chain.py`
+
+O relatório formata o grafo e o mapa já calculados; ele não recalcula valores.
+
+## INT-002 — Série física de 200 µL com inoculação 1:1
+
+**Resultado conhecido:** `20 µL` de solução de trabalho + `180 µL` de meio
+preparam os `200 µL` iniciais. Para alvo final de `4 µg/mL`, são requeridos
+`8 µg/mL` pré-inoculação e `80 µg/mL` na solução de trabalho. Transferência
+seriada de `100 µL`, meio pré-carregado de `100 µL` e inóculo de `100 µL`
+deixam `200 µL` finais por poço e reduzem a série pré-inoculação à metade.
+
+**Classificação:** preparação, série e inoculação são DERIVED; volumes são
+LAB-CONSTRAINT.
+
+**Teste automatizado:** `tests/integration/test_serial_plate_protocol.py`

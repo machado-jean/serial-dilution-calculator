@@ -152,3 +152,39 @@ volumes, transferências físicas, descarte ou disposição em placa.
 
 **Exemplo e teste analítico:** `64 µg/mL` com fator `2` e quatro posições gera
 `64`, `32`, `16` e `8 µg/mL`. Ver `tests/analytical/test_serial_dilution.py`.
+
+## EQ-WORK-001 — Concentração de solução de trabalho
+
+**Classificação:** DERIVED
+
+```text
+C_trabalho = C_pre × V_pre / V_antimicrobiano
+```
+
+**Derivação:** a massa de antimicrobiano adicionada ao preparo é
+`C_trabalho × V_antimicrobiano`; essa mesma massa está distribuída em
+`V_pre` na concentração `C_pre`. Igualando as duas expressões e isolando
+`C_trabalho`, resulta a equação acima.
+
+**Premissas:** volumes configurados, mistura homogênea e ausência de perdas.
+Os volumes são LAB-CONSTRAINT e não são fixados na equação. Ver
+`specs/013-working-solution.md`.
+
+## Fluxo canônico de série física em placa
+
+**Classificação:** volumes e transferências são LAB-CONSTRAINT; as correções de
+concentração usam `EQ-SER-001` e `EQ-INOC-001`/`EQ-INOC-002`.
+
+O preset canônico prepara os `200 µL` iniciais no primeiro poço com `20 µL` de
+solução de trabalho e `180 µL` de meio. Em seguida, pré-carrega `100 µL` de
+meio nos poços seguintes e transfere `100 µL` em sequência. Cada poço fica com
+`100 µL` antes da inoculação; o último poço tem `100 µL` descartados após a
+mistura. A adição de `100 µL` de inóculo leva cada poço a `200 µL` finais e
+reduz a concentração pré-inoculação pela metade.
+
+Logo, a solução inicial da série é preparada a duas vezes a concentração final
+inicial desejada e a solução de trabalho é calculada por `EQ-WORK-001`. Para
+um alvo final de `4 µg/mL`, isto corresponde a `8 µg/mL` antes da inoculação e
+`80 µg/mL` na solução de trabalho do preset `20 + 180 µL`. Este é um preset
+laboratorial editável, não uma alegação de conformidade integral com um método
+de referência.

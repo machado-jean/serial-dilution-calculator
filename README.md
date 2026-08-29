@@ -15,6 +15,8 @@ Nesta fase inicial, o núcleo científico não possui dependências de execuçã
 
 ## Estado atual
 
-Etapa 2: fundação do projeto e modelo dimensional de unidades.
+Núcleo científico em desenvolvimento: unidades, diluição, solução estoque,
+restrições laboratoriais, intermediárias, inoculação, séries, placa, protocolo,
+mapa e relatório técnico inicial.
 
 Os requisitos científicos e as regras arquiteturais estão definidos em [AGENTS.md](AGENTS.md).

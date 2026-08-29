@@ -8,3 +8,5 @@ build/
 dist/
 *.egg-info/
 
+# Artigos e referências locais para consulta científica
+docs/articles/
