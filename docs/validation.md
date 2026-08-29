@@ -47,3 +47,17 @@ valida a interpretação documental de potenciais expressos em outras bases.
 
 Este caso valida a interpretação da configuração laboratorial. Ele não afirma
 que `20 µL` seja um limite científico universal.
+
+## INT-AN-001 — Intermediária para transferência direta inviável
+
+**Resultado conhecido:** uma origem de `10000 µg/mL` para alvo de `100 µg/mL`
+em `200 µL`, com mínimo de `20 µL`, requer intermediária de `1000 µg/mL` e
+volume de `200 µL`.
+
+**Classificação:** `EQ-DIL-002` é DERIVED; a regra de uma etapa é EXPERIMENTAL;
+o mínimo de `20 µL` é LAB-CONSTRAINT.
+
+**Teste automatizado:** `tests/analytical/test_intermediate_solution.py`
+
+Este caso valida a regra determinística proposta, não um procedimento
+laboratorial normativo completo.

@@ -91,3 +91,24 @@ são inválidos para aquela configuração.
 
 Consulte `specs/005-lab-constraints.md` para o modelo, as limitações e os casos
 de aceitação.
+
+## EQ-DIL-002 — Volume de origem necessário para uma diluição
+
+**Classificação:** DERIVED
+
+```text
+V₁ = (C₂ × V₂) / C₁
+```
+
+**Derivação:** partindo de `C₁ × V₁ = C₂ × V₂`, divide-se ambos os lados por
+`C₁`, obtendo-se o volume de origem `V₁` necessário para alcançar a
+concentração-alvo `C₂` no volume final `V₂`.
+
+**Premissas:** conservação do soluto, mistura homogênea e `C₁ ≥ C₂`. A equação
+não avalia a viabilidade de pipetagem; essa avaliação pertence às restrições
+laboratoriais configuráveis.
+
+**Uso no planejamento intermediário:** a regra experimental de uma única etapa
+está documentada em `specs/004-intermediate-solution.md`. Ela usa
+`EQ-DIL-002` e `PipetteConstraint`, sem alegar otimização ou conformidade
+metodológica.
