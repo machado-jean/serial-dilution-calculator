@@ -48,3 +48,32 @@ diluição descrita como princípio geral no `AGENTS.md` do projeto.
 
 **Exemplo e teste analítico:** `1000 µg/mL × 20 µL / 200 µL = 100 µg/mL`.
 Ver `tests/analytical/test_dilution.py`.
+
+## EQ-STOCK-001 — Massa de pó para solução estoque
+
+**Classificação:** DERIVED
+
+```text
+M_pó = (C_alvo × V_final) / P
+```
+
+| Variável | Unidade dimensional | Significado |
+| --- | --- | --- |
+| `M_pó` | massa | massa teórica de pó a pesar |
+| `C_alvo` | concentração | concentração ativa desejada |
+| `V_final` | volume | volume final total da solução |
+| `P` | fração adimensional | fração ativa declarada para o material |
+
+**Derivação:** a massa ativa necessária é `M_ativa = C_alvo × V_final`. Com a
+fração ativa `P`, a massa ativa presente no pó é `M_pó × P`. Logo,
+`M_pó × P = C_alvo × V_final`; isolando `M_pó`, obtém-se a equação acima.
+
+**Premissas:** concentração baseada em material ativo, mistura homogênea e
+fração ativa documentada. Não há correção para solubilidade, estabilidade,
+legibilidade de balança ou base de potência específica do fornecedor.
+
+**Limitação de segurança:** potência ausente não é interpretada como 100%; o
+cálculo é interrompido até que uma fração ativa válida seja fornecida.
+
+**Exemplo e teste analítico:** `1000 µg/mL × 1 mL / 0,80 = 1250 µg`. Ver
+`tests/analytical/test_stock_solution.py`.

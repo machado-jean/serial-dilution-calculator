@@ -24,3 +24,14 @@ mesma razão massa por volume. Ele não valida um procedimento de diluição.
 
 Este caso valida a implementação da equação de diluição para volumes em uma
 mesma unidade. Ele não avalia precisão de pipetagem ou procedimentos de ensaio.
+
+## STOCK-AN-001 — Massa de pó corrigida por fração ativa
+
+**Resultado conhecido:** `1000 µg/mL × 1 mL / 0,80 = 1250 µg`
+
+**Classificação:** operação DERIVED, `EQ-STOCK-001`
+
+**Teste automatizado:** `tests/analytical/test_stock_solution.py`
+
+Este caso valida o balanço de massa com uma fração ativa conhecida. Ele não
+valida a interpretação documental de potenciais expressos em outras bases.

@@ -6,7 +6,7 @@ import pytest
 
 from antimicrobial_calculator.calculations import (
     CalculationInputError,
-    EQUATION_ID,
+    DILUTION_EQUATION_ID,
     calculate_diluted_concentration,
 )
 from antimicrobial_calculator.units import (
@@ -25,7 +25,7 @@ SOURCE_CONCENTRATION = Concentration(
 
 
 def test_dilution_exposes_its_traceable_equation_identifier() -> None:
-    assert EQUATION_ID == "EQ-DIL-001"
+    assert DILUTION_EQUATION_ID == "EQ-DIL-001"
 
 
 @pytest.mark.parametrize(
