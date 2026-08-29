@@ -77,3 +77,17 @@ cálculo é interrompido até que uma fração ativa válida seja fornecida.
 
 **Exemplo e teste analítico:** `1000 µg/mL × 1 mL / 0,80 = 1250 µg`. Ver
 `tests/analytical/test_stock_solution.py`.
+
+## Restrições laboratoriais de pipetagem
+
+**Classificação:** LAB-CONSTRAINT
+
+O volume mínimo confiável e a capacidade máxima de uma pipeta não pertencem às
+equações `EQ-DIL-001` ou `EQ-STOCK-001`. Eles são valores configuráveis usados
+para avaliar a viabilidade operacional de um volume já calculado. A avaliação
+produz os estados `INFO`, `CAUTION` ou `INVALID`; o estado no limite mínimo
+gera aviso, enquanto volumes abaixo do mínimo ou acima do máximo configurado
+são inválidos para aquela configuração.
+
+Consulte `specs/005-lab-constraints.md` para o modelo, as limitações e os casos
+de aceitação.

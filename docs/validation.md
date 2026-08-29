@@ -35,3 +35,15 @@ mesma unidade. Ele não avalia precisão de pipetagem ou procedimentos de ensaio
 
 Este caso valida o balanço de massa com uma fração ativa conhecida. Ele não
 valida a interpretação documental de potenciais expressos em outras bases.
+
+## LAB-AN-001 — Avaliação de volume no limite mínimo
+
+**Resultado conhecido:** com mínimo confiável de `20 µL`, uma transferência de
+`20 µL` é aceita com o estado `CAUTION`.
+
+**Classificação:** LAB-CONSTRAINT
+
+**Teste automatizado:** `tests/unit/test_pipette_constraints.py`
+
+Este caso valida a interpretação da configuração laboratorial. Ele não afirma
+que `20 µL` seja um limite científico universal.
